@@ -121,8 +121,12 @@ input, select, textarea {
 
 	body {
 		background-color: #fff;
+		
 	}
 
+	footer {
+			color: #f1f1f1;
+	}
 	body, input, select, textarea {
 		font-family: "Source Sans Pro", Helvetica, sans-serif;
 		font-size: 17pt;
