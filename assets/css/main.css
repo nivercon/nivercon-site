@@ -7,6 +7,15 @@
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 */
 
+:root {
+	--body: #170F1Eff;
+	--cornflower-blue: #7688FBff;
+	--vivid-sky-blue: #45CFFFff;
+	--celadon: #95D99Fff;
+	--minion-yellow: #F4DA48ff;
+	--text: #E4DEE1ff;	
+}
+
 html, body, div, span, applet, object,
 iframe, h1, h2, h3, h4, h5, h6, p, blockquote,
 pre, a, abbr, acronym, address, big, cite,
@@ -99,12 +108,8 @@ input, select, textarea {
 	}
 
 	body {
-		background-color: #935d8c;
-		background-image: url("images/overlay.png"), -moz-linear-gradient(-135deg, #fff 15%, rgb(43,53,49) 85%);
-		background-image: url("images/overlay.png"), -webkit-linear-gradient(-135deg, #fff 15%, rgb(43,53,49) 85%);
-		background-image: url("images/overlay.png"), -ms-linear-gradient(-135deg, #fff 15%, rgb(43,53,49) 85%);
-		background-image: url("images/overlay.png"), linear-gradient(-135deg, #fff 15%, rgb(43,53,49) 85%);
-	}
+		background-color: var(--body);
+		}
 
 		body.is-preload *, body.is-preload *:before, body.is-preload *:after {
 			-moz-animation: none !important;
@@ -119,10 +124,6 @@ input, select, textarea {
 
 /* Type */
 
-	body {
-		background-color: #fff;
-		
-	}
 
 	footer {
 			color: #f1f1f1;
@@ -318,7 +319,7 @@ input, select, textarea {
 	}
 
 	h1, h2, h3, h4, h5, h6 {
-		color: #ffffff;
+		color: var(--text);
 	}
 
 	blockquote {
@@ -1924,8 +1925,7 @@ input, select, textarea {
 	input[type="submit"],
 	input[type="reset"],
 	input[type="button"],
-	button,
-	.button {
+	button {
 		background-color: transparent;
 		box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.35);
 		color: #ffffff !important;
@@ -2293,24 +2293,14 @@ input, select, textarea {
 				line-height: 2em;
 			}
 
-		.icon.style1 {
-			color: #efa8b0;
-		}
-
-		.icon.style2 {
-			color: #c79cc8;
-		}
-
+		.icon.style1,
+		.icon.style5,
 		.icon.style3 {
-			color: #a89cc8;
+			color: var(--cornflower-blue);
 		}
 
 		.icon.style4 {
 			color: #9bb2e1;
-		}
-
-		.icon.style5 {
-			color: #8cc9f0;
 		}
 
 		@media screen and (max-width: 1680px) {
@@ -2491,7 +2481,7 @@ input, select, textarea {
 	}
 
 	dl dt {
-		color: #ffffff;
+		color: var(--text);
 	}
 
 /* Actions */
@@ -2510,6 +2500,10 @@ input, select, textarea {
 		ul.actions li {
 			padding: 0 0 0 1em;
 			vertical-align: middle;
+		}
+
+		ul.actions li a {
+			border: 1px solid var(--text);
 		}
 
 		ul.actions.special {
@@ -2679,6 +2673,10 @@ input, select, textarea {
 		margin-top: 3em;
 	}
 
+	footer p {
+		color: var(--text);
+	}
+
 	@media screen and (max-width: 736px) {
 
 		header.major {
@@ -2745,8 +2743,9 @@ input, select, textarea {
 			border-top: solid 2px;
 		}
 
-		table.alt {
+		.alt {
 			border-collapse: separate;
+			color: var(--text);
 		}
 
 			table.alt tbody tr td {
@@ -2990,6 +2989,7 @@ input, select, textarea {
 			-webkit-flex: 1;
 			-ms-flex: 1;
 			flex: 1;
+			color: var(--body);
 		}
 
 			.spotlight .content > :last-child {
@@ -3086,10 +3086,15 @@ input, select, textarea {
 		#header p {
 			font-size: 1.25em;
 			letter-spacing: -0.025em;
+			color: var(--text);
 		}
 
 		#header.alt {
-			padding: 7em 5em 4em 5em ;
+			text-align: center;
+			height: 100vh;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
 		}
 
 			#header.alt h1 {
@@ -3124,7 +3129,7 @@ input, select, textarea {
 				#header.alt .logo img {
 					display: block;
 					margin: 0 auto;
-					max-width: 75%;
+					max-width: 60%;
 				}
 
 		@media screen and (max-width: 1280px) {
@@ -3214,17 +3219,12 @@ input, select, textarea {
 /* Nav */
 
 	#nav {
-		-moz-transition: background-color 0.2s ease, border-top-left-radius 0.2s ease, border-top-right-radius 0.2s ease, padding 0.2s ease;
-		-webkit-transition: background-color 0.2s ease, border-top-left-radius 0.2s ease, border-top-right-radius 0.2s ease, padding 0.2s ease;
-		-ms-transition: background-color 0.2s ease, border-top-left-radius 0.2s ease, border-top-right-radius 0.2s ease, padding 0.2s ease;
-		transition: background-color 0.2s ease, border-top-left-radius 0.2s ease, border-top-right-radius 0.2s ease, padding 0.2s ease;
-		background-color: #ffffff;
+		background-color: #fff;
 		color: #636363;
 		position: absolute;
 		width: 64em;
 		max-width: calc(100% - 4em);
 		padding: 1em;
-		background-color: #f7f7f7;
 		border-top-left-radius: 0.25em;
 		border-top-right-radius: 0.25em;
 		cursor: default;
@@ -3293,14 +3293,16 @@ input, select, textarea {
 					border: 0;
 					border-radius: 8px;
 					box-shadow: inset 0 0 0 1px transparent;
+					color: var(--body);
 				}
 
 					#nav ul li a:hover {
+						color: var(--body);
 						background-color: rgba(222, 222, 222, 0.25);
 					}
 
 					#nav ul li a.active {
-						background-color: #ffffff;
+						background-image: linear-gradient(315deg, #7C7AF4ff, #48CBFCff, #AED599ff, #F6D561ff);
 						box-shadow: none;
 					}
 
@@ -3337,8 +3339,8 @@ input, select, textarea {
 /* Main */
 
 	#main {
-		background-color: #ffffff;
-		color: #636363;
+		background-color: var(--text);
+		color: var(--body);
 		border-radius: 0.25em;
 	}
 
@@ -3351,11 +3353,11 @@ input, select, textarea {
 		}
 
 		#main strong, #main b {
-			color: #636363;
+			color: var(--cornflower-blue);
 		}
 
 		#main h1, #main h2, #main h3, #main h4, #main h5, #main h6 {
-			color: #636363;
+			color: var(--body);
 		}
 
 		#main blockquote {
@@ -3378,18 +3380,28 @@ input, select, textarea {
 		#main input[type="submit"],
 		#main input[type="reset"],
 		#main input[type="button"],
-		#main button,
-		#main .button {
+		#main button {
 			background-color: transparent;
 			box-shadow: inset 0 0 0 1px #dddddd;
 			color: #636363 !important;
 		}
 
+		#main .button {
+			color: var(--body) !important;
+			border: 1px solid var(--cornflower-blue);
+			border-radius: 10px;
+			transition: all 400ms;
+		}
+
+		#main .button:hover {
+			background-color: var(--cornflower-blue);
+			color: var(--text) !important;
+		}
+
 			#main input[type="submit"]:hover,
 			#main input[type="reset"]:hover,
 			#main input[type="button"]:hover,
-			#main button:hover,
-			#main .button:hover {
+			#main button:hover {
 				background-color: rgba(222, 222, 222, 0.25);
 			}
 
@@ -3519,11 +3531,11 @@ input, select, textarea {
 		}
 
 		#main .icon.major {
-			border-color: #dddddd;
+			border-color: var(--cornflower-blue);
 		}
 
 			#main .icon.major:before {
-				border-color: #dddddd;
+				border-color: var(--cornflower-blue);
 			}
 
 		#main .icon.alt {
@@ -3549,10 +3561,10 @@ input, select, textarea {
 
 		#main header.major h2:after {
 			background-color: #dddddd;
-			background-image: -moz-linear-gradient(90deg, #efa8b0, #a89cc8, #8cc9f0);
-			background-image: -webkit-linear-gradient(90deg, #efa8b0, #a89cc8, #8cc9f0);
-			background-image: -ms-linear-gradient(90deg, #efa8b0, #a89cc8, #8cc9f0);
-			background-image: linear-gradient(90deg, #efa8b0, #a89cc8, #8cc9f0);
+			background-image: -moz-linear-gradient(90deg, #7C7AF4ff, #48CBFCff, #AED599ff, #F6D561ff);
+			background-image: -webkit-linear-gradient(90deg, #7C7AF4ff, #48CBFCff, #AED599ff, #F6D561ff);
+			background-image: -ms-linear-gradient(90deg, #7C7AF4ff, #48CBFCff, #AED599ff, #F6D561ff);
+			background-image: linear-gradient(90deg, #7C7AF4ff, #48CBFCff, #AED599ff, #F6D561ff);
 		}
 
 		#main table tbody tr {
